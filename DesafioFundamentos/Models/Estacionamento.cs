@@ -6,7 +6,6 @@ namespace DesafioFundamentos.Models
     {
         private decimal precoInicial = 15;
         private decimal precoPorHora = 5;
-        private List<string> veiculos = new List<string>();
 
         private List<Carro> carros = new List<Carro>();
 
@@ -21,8 +20,6 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             var placa = Console.ReadLine();
             var carro = new Carro(placa);
-            /* Codigo Antigo
-             veiculos.Add(placa); */
             carros.Add(carro);
         }
 
@@ -66,12 +63,6 @@ namespace DesafioFundamentos.Models
             if (carros.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                /*int contador = 0;
-                foreach (string veiculo in veiculos)
-                {
-                    Console.WriteLine($"Veiculo na vaga {contador} e a placa é {veiculo}");
-                    contador++;
-                }*/  // Codigo Antigo
                 for (int i = 0; i < carros.Count; i++)
                 {
                     Console.WriteLine($"Veiculo na vaga {i} e a placa é {carros[i]}");
